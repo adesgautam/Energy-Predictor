@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+	<title>Hotdog-Pizza</title>
+</head>
+<body>
+	{% block content %}
+
+		<p> 
+			<img  class='img-responsive' border="2" src="{{ img.image.url }}" onerror="this.src='/media/images/None/no_image.png'"/> 
+		</p>
+		<div>&nbsp;</div>
+	 	
+		<p>{{ msg }}</p>
+		<form action="." method="POST" enctype="multipart/form-data">{% csrf_token %}
+		    {{ form.as_p }}
+		    <input class="btn btn-default navbar-btn" type="submit" value="Upload" />
+		</form>
+		<p>
+			<div>&nbsp;</div>
+			<a type="button" class="btn btn-default navbar-btn" href='/process/'>Guess</a>
+		</p>
+	{% endblock %}
+
+
+	{% block footer %}
+	<hr>
+	<p>Thanks for visiting </p>
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+dj-database-url==0.4.1
+Django==2.0.5
+gunicorn==19.6.0
+psycopg2==2.7.3.1
+whitenoise==3.2
+tensorflow==1.8.0
+numpy==1.14.3
+Keras==2.1.6
+pandas==0.20.1
+matplotlib==2.0.2
+requests==2.18.4
+scikit-learn==0.18.1
